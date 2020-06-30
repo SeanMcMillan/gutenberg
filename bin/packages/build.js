@@ -171,7 +171,8 @@ stream
 				console.error( error );
 			}
 
-			if ( ended && ++complete === files.length ) {
+			++complete;
+			if ( ended && complete === files.length ) {
 				workerFarm.end( worker );
 			}
 		} )
